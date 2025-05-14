@@ -8,7 +8,7 @@ on:
 
 jobs:
   tox:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     strategy:
       max-parallel: 7
       matrix:
@@ -24,7 +24,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - uses: actions/setup-python@v5
+    - uses: MatteoH2O1999/setup-python@v4
       with:
         python-version: ${{ matrix.python-version }}
         allow-prereleases: true
